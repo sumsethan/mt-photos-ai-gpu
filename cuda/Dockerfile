@@ -2,7 +2,7 @@ FROM nvidia/cuda:11.7.1-cudnn8-devel-ubuntu22.04
 #FROM tensorflow/tensorflow:2.12.0-gpu
 USER root
 # 镜像加速
-COPY cuda/sources.list /etc/apt/sources.list
+#COPY cuda/sources.list /etc/apt/sources.list
 RUN apt update && \
     apt install -y wget libgl1-mesa-glx libglib2.0-0 libsm6 libxrender1 libfontconfig  python3 pip && \
     wget http://nz2.archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.22_amd64.deb && \
