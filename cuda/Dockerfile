@@ -1,4 +1,5 @@
-FROM nvidia/cuda:11.7.1-cudnn8-devel-ubuntu22.04
+#FROM nvidia/cuda:11.7.1-cudnn8-devel-ubuntu22.04
+FROM tensorflow/tensorflow:2.10.0-gpu
 USER root
 # 镜像加速
 COPY cuda/sources.list /etc/apt/sources.list
