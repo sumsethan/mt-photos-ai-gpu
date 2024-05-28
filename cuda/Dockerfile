@@ -16,7 +16,6 @@ COPY cuda/requirements.txt .
 
 # 安装依赖包
 RUN python3 -m pip install paddlepaddle-gpu==2.5.1.post112 -f https://www.paddlepaddle.org.cn/whl/linux/cudnnin/stable.html
-RUN rm -rf /opt/hostedtoolcache
 RUN pip3 install --no-cache-dir -r requirements.txt
 COPY cuda/server.py .
 
