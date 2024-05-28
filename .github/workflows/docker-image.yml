@@ -28,4 +28,4 @@ jobs:
           context: .
           file: cuda/Dockerfile
           push: true
-          tags: sumsethan/mt-photos-ai-gpu:latest
+          tags: sumsethan/mt-photos-ai-gpu:240528
