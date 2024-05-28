@@ -1,5 +1,5 @@
 #FROM nvidia/cuda:11.7.1-cudnn8-devel-ubuntu22.04
-FROM tensorflow/tensorflow:2.10.0-gpu
+FROM tensorflow/tensorflow:2.12.0-gpu
 USER root
 # 镜像加速
 COPY cuda/sources.list /etc/apt/sources.list
@@ -15,7 +15,7 @@ WORKDIR /app
 COPY cuda/requirements.txt .
 
 # 安装依赖包
-RUN python3 -m pip install paddlepaddle-gpu==2.3.2.post112 -f https://www.paddlepaddle.org.cn/whl/linux/cudnnin/stable.html && \
+RUN python3 -m pip install paddlepaddle-gpu==2.5.1.post112 -f https://www.paddlepaddle.org.cn/whl/linux/cudnnin/stable.html && \
     pip3 install --no-cache-dir -r requirements.txt  --index-url=https://pypi.tuna.tsinghua.edu.cn/simple/
 COPY cuda/server.py .
 
