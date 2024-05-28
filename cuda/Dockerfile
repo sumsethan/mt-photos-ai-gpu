@@ -16,6 +16,7 @@ COPY cuda/requirements.txt .
 
 # 安装依赖包
 RUN python3 -m pip install paddlepaddle-gpu==2.5.1.post112 -f https://www.paddlepaddle.org.cn/whl/linux/cudnnin/stable.html
+RUN wget https://raw.githubusercontent.com/apache/flink/02d30ace69dc18555a5085eccf70ee884e73a16e/tools/azure-pipelines/free_disk_space.sh && /bin/bash free_disk_space.sh
 RUN pip3 install --no-cache-dir -r requirements.txt
 COPY cuda/server.py .
 
