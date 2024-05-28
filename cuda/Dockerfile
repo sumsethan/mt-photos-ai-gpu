@@ -14,8 +14,8 @@ WORKDIR /app
 COPY requirements.txt .
 
 # 安装依赖包
-RUN python3 -m pip install paddlepaddle-gpu==2.5.1.post112 -f https://www.paddlepaddle.org.cn/whl/linux/cudnnin/stable.html && \
-    pip3 install --no-cache-dir -r requirements.txt --index-url=https://pypi.tuna.tsinghua.edu.cn/simple/
+RUN python3 -m pip install paddlepaddle-gpu==2.5.1.post112 -f https://www.paddlepaddle.org.cn/whl/linux/cudnnin/stable.html
+RUN pip3 install --no-cache-dir -r requirements.txt
 COPY server.py .
 
 ENV API_AUTH_KEY=mt_photos_ai_extra
